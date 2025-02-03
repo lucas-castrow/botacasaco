@@ -9,7 +9,7 @@ interface GenerateButtonProps {
 }
 
 const GenerateButton = ({
-  onClick = () => {},
+  onClick = () => { },
   isLoading = false,
   disabled = false,
 }: GenerateButtonProps) => {

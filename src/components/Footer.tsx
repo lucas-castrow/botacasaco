@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Linkedin, X } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">FashionAI</h3>
+            <h3 className="text-lg font-semibold text-white">BotaCasaco</h3>
             <p className="text-sm text-gray-400">
               Revolutionizing the way you try on clothes with AI-powered virtual
               fitting technology.
@@ -42,7 +42,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-2">
             <h3 className="text-lg font-semibold text-white">
               Connect With Us
             </h3>
@@ -57,7 +57,7 @@ const Footer = () => {
                 href="#"
                 className="text-gray-400 hover:text-[#4A90E2] transition-colors"
               >
-                <Twitter className="h-6 w-6" />
+                <X className="h-6 w-6" />
               </a>
               <a
                 href="#"
@@ -68,9 +68,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-[#4A90E2]/20 text-center">
+        <div className="mt-4 pt-10 border-t border-[#4A90E2]/20 text-center">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} FashionAI. All rights reserved.
+            © {new Date().getFullYear()} BotaCasaco. All rights reserved.
           </p>
         </div>
       </div>

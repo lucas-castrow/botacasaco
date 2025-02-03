@@ -9,7 +9,7 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <Shirt className="h-8 w-8 text-[#4A90E2]" />
             <span className="text-2xl font-bold bg-gradient-to-r from-[#8A2BE2] to-[#4A90E2] text-transparent bg-clip-text">
-              FashionAI
+              BotaCasaco
             </span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">

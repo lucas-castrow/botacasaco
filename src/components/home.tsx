@@ -4,18 +4,13 @@ import ResultDisplay from "./ResultDisplay";
 import GenerateButton from "./GenerateButton";
 import Header from "./Header";
 import Footer from "./Footer";
+import { generateImage } from "../utils/imageGenerator";
 
-interface HomeProps {
-  onGenerate?: () => void;
-  isGenerating?: boolean;
-}
-
-const Home = ({
-  onGenerate = () => console.log("Generate clicked"),
-  isGenerating = false,
-}: HomeProps) => {
+const Home = () => {
   const [poseImage, setPoseImage] = useState<File | null>(null);
   const [clothingImage, setClothingImage] = useState<File | null>(null);
+  const [result, setResult] = useState<any>(null);
+  const [isGenerating, setIsGenerating] = useState<boolean>(false);
 
   const handlePoseUpload = (file: File) => {
     setPoseImage(file);
@@ -23,6 +18,15 @@ const Home = ({
 
   const handleClothingUpload = (file: File) => {
     setClothingImage(file);
+  };
+
+  const handleGenerate = async () => {
+    if (poseImage && clothingImage) {
+      setIsGenerating(true);
+      const result = await generateImage({ poseImage, clothingImage });
+      setResult(result);
+      setIsGenerating(false);
+    }
   };
 
   return (
@@ -46,13 +50,13 @@ const Home = ({
             </div>
 
             <div className="flex flex-col items-center space-y-4">
-              <ResultDisplay onRegenerate={onGenerate} />
+              <ResultDisplay result={result} isLoading={isGenerating} />
             </div>
           </div>
 
           <div className="flex justify-center mt-8">
             <GenerateButton
-              onClick={onGenerate}
+              onClick={handleGenerate}
               isLoading={isGenerating}
               disabled={!poseImage || !clothingImage}
             />

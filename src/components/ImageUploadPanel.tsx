@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Upload, Image as ImageIcon } from "lucide-react";
@@ -11,11 +11,12 @@ interface ImageUploadPanelProps {
 
 const ImageUploadPanel = ({
   title = "Upload Image",
-  onImageUpload = () => {},
+  onImageUpload = () => { },
   previewUrl = "",
 }: ImageUploadPanelProps) => {
   const [isDragging, setIsDragging] = useState(false);
   const [preview, setPreview] = useState(previewUrl);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -56,9 +57,8 @@ const ImageUploadPanel = ({
   return (
     <Card className="w-[400px] h-[500px] bg-[#2A2A2A] backdrop-blur-lg bg-opacity-50 border-2 border-[#4A90E2]/20 overflow-hidden">
       <div
-        className={`flex flex-col items-center justify-center w-full h-full p-6 transition-colors ${
-          isDragging ? "bg-[#4A90E2]/10" : ""
-        }`}
+        className={`flex flex-col items-center justify-center w-full h-full p-6 transition-colors ${isDragging ? "bg-[#4A90E2]/10" : ""
+          }`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
@@ -93,21 +93,21 @@ const ImageUploadPanel = ({
             <p className="text-sm text-gray-400">
               Drag and drop your image here, or click to select
             </p>
-            <label htmlFor="file-upload">
-              <Button
-                variant="outline"
-                className="mt-2 border-[#4A90E2]/50 hover:border-[#4A90E2] text-[#4A90E2]"
-              >
-                Select File
-              </Button>
-              <input
-                id="file-upload"
-                type="file"
-                className="hidden"
-                accept="image/*"
-                onChange={handleFileInput}
-              />
-            </label>
+            <Button
+              variant="outline"
+              className="mt-2 border-[#4A90E2]/50 hover:border-[#4A90E2] text-[#4A90E2]"
+              onClick={() => fileInputRef.current?.click()}
+            >
+              Select File
+            </Button>
+            <input
+              ref={fileInputRef}
+              id="file-upload"
+              type="file"
+              className="hidden"
+              accept="image/*"
+              onChange={handleFileInput}
+            />
           </div>
         )}
       </div>
