@@ -8,7 +8,7 @@ import PricingSection from "@/components/landing/PricingSection";
 const LandingPage = () => {
   return (
     <div className="min-h-screen w-full bg-[#1A1A1A] flex flex-col">
-      <Header />
+      {/* <Header /> */}
       <main className="flex-1">
         <HeroSection />
         <DemoSection />

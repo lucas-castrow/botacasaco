@@ -21,7 +21,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Transform Your Fashion Experience with AI
+            Transforme Sua Experiência de Moda com IA
           </motion.h1>
           <motion.p
             className="mt-6 text-lg leading-8 text-gray-300"
@@ -29,8 +29,8 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Try on clothes virtually with our advanced AI technology. Upload
-            your photo and see how any clothing item looks on you instantly.
+            Experimente roupas virtualmente com nossa tecnologia avançada de IA.
+            Faça o upload da sua foto e veja instantaneamente como qualquer peça de roupa fica em você.
           </motion.p>
           <motion.div
             className="mt-10 flex items-center justify-center gap-x-6"
@@ -42,7 +42,7 @@ const HeroSection = () => {
               className="bg-gradient-to-r from-[#8A2BE2] to-[#4A90E2] hover:opacity-90 transition-all duration-300 px-8 py-6 hover:scale-105"
               onClick={() => navigate("/generate")}
             >
-              Try Now
+              Experimente Agora
             </Button>
           </motion.div>
         </motion.div>

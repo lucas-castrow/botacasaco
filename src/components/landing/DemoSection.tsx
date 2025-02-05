@@ -13,10 +13,10 @@ const DemoSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            See it in Action
+            Veja em Ação
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Watch how our AI transforms your photos instantly
+            Veja como nossa IA transforma suas fotos instantaneamente
           </p>
         </motion.div>
         <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-3">
@@ -29,12 +29,12 @@ const DemoSection = () => {
           >
             <div className="overflow-hidden rounded-2xl bg-[#2A2A2A] p-4 hover:ring-2 hover:ring-[#4A90E2] transition-all duration-300">
               <img
-                src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                alt="Model Pose"
+                src="pose.jpg"
+                alt="Modelo Pousando"
                 className="rounded-lg w-full h-[300px] object-cover"
               />
               <p className="mt-4 text-center text-sm text-gray-400">
-                1. Your Photo
+                1. Selecione a foto
               </p>
             </div>
           </motion.div>
@@ -48,12 +48,12 @@ const DemoSection = () => {
           >
             <div className="overflow-hidden rounded-2xl bg-[#2A2A2A] p-4 hover:ring-2 hover:ring-[#4A90E2] transition-all duration-300">
               <img
-                src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                alt="Clothing Item"
+                src="jacket.jpeg"
+                alt="Item de Roupa"
                 className="rounded-lg w-full h-[300px] object-cover"
               />
               <p className="mt-4 text-center text-sm text-gray-400">
-                2. Select Clothing
+                2. Selecione a roupa
               </p>
             </div>
           </motion.div>
@@ -67,12 +67,12 @@ const DemoSection = () => {
           >
             <div className="overflow-hidden rounded-2xl bg-[#2A2A2A] p-4 hover:ring-2 hover:ring-[#4A90E2] transition-all duration-300">
               <img
-                src="https://images.unsplash.com/photo-1475180098004-ca77a66827be?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
-                alt="AI Result"
+                src="generated.webp"
+                alt="Resultado da IA"
                 className="rounded-lg w-full h-[300px] object-cover"
               />
               <p className="mt-4 text-center text-sm text-gray-400">
-                3. AI Generated Result
+                3. Resultado gerado pela IA
               </p>
             </div>
           </motion.div>

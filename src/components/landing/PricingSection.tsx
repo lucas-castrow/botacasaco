@@ -14,32 +14,33 @@ const PricingSection = () => {
           transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Simple, Transparent Pricing
+            Planos sem fidelidade
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
-            Choose the plan that works best for you
+            Escolha a opção que funciona melhor para você
           </p>
         </motion.div>
         <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 lg:max-w-4xl lg:grid-cols-2">
           <PriceCard
-            title="Basic"
+            option="basic"
+            title="Casual"
             price="5.99"
             features={[
-              "1 AI-generated image",
-              "High-quality output",
-              "24/7 support",
-              "Quick generation",
+              "1 imagem gerada por IA",
+              "Saída de alta qualidade",
+              "Geração rápida",
             ]}
             delay={0.2}
           />
           <PriceCard
+            option="pro"
             title="Pro"
-            price="19.99"
+            price="11.99"
             features={[
-              "5 AI-generated images",
-              "Priority processing",
-              "24/7 premium support",
-              "Advanced customization",
+              "2 imagens gerada por IA",
+              "Processamento prioritário",
+              "Personalização de parâmetros avançada",
+              "Melhore detalhes na geração da imagem",
             ]}
             isPopular
             delay={0.4}

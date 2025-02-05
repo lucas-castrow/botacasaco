@@ -10,6 +10,7 @@ interface PriceCardProps {
   features: string[];
   isPopular?: boolean;
   delay?: number;
+  option: string;
 }
 
 const PriceCard = ({
@@ -18,6 +19,7 @@ const PriceCard = ({
   features,
   isPopular = false,
   delay = 0,
+  option,
 }: PriceCardProps) => {
   const navigate = useNavigate();
 
@@ -32,14 +34,14 @@ const PriceCard = ({
     >
       {isPopular && (
         <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-[#8A2BE2] to-[#4A90E2] px-4 py-1 text-sm font-semibold text-white">
-          Most Popular
+          Popular
         </span>
       )}
       <div className="mb-6">
         <h3 className="text-xl font-semibold text-white">{title}</h3>
         <div className="mt-4 flex items-baseline">
-          <span className="text-4xl font-bold text-white">${price}</span>
-          <span className="ml-1 text-sm text-gray-400">/image</span>
+          <span className="text-4xl font-bold text-white">R${price}</span>
+          <span className="ml-1 text-sm text-gray-400">/imagem</span>
         </div>
       </div>
       <ul className="mb-6 space-y-4">
@@ -59,9 +61,9 @@ const PriceCard = ({
       </ul>
       <Button
         className="w-full bg-gradient-to-r from-[#8A2BE2] to-[#4A90E2] hover:opacity-90 transition-all duration-300 hover:scale-105"
-        onClick={() => navigate("/generate")}
+        onClick={() => navigate(option)}
       >
-        Try Now
+        Experimentar agora
       </Button>
     </motion.div>
   );

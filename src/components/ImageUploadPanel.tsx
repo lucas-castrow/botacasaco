@@ -77,7 +77,7 @@ const ImageUploadPanel = ({
                 setPreview("");
               }}
             >
-              Change Image
+              Trocar imagem
             </Button>
           </div>
         ) : (
@@ -91,14 +91,15 @@ const ImageUploadPanel = ({
             </div>
             <h3 className="text-xl font-semibold text-white">{title}</h3>
             <p className="text-sm text-gray-400">
-              Drag and drop your image here, or click to select
+              {/* Drag and drop your image here, or click to select */}
+              Arraste sua imagem aqui, ou clique para selecionar
             </p>
             <Button
               variant="outline"
               className="mt-2 border-[#4A90E2]/50 hover:border-[#4A90E2] text-[#4A90E2]"
               onClick={() => fileInputRef.current?.click()}
             >
-              Select File
+              Selecionar
             </Button>
             <input
               ref={fileInputRef}

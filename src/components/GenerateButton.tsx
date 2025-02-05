@@ -22,10 +22,10 @@ const GenerateButton = ({
       {isLoading ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Generating...
+          Gerando imagem...
         </>
       ) : (
-        "Generate"
+        "Gerar imagem"
       )}
     </Button>
   );

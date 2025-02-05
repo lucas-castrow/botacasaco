@@ -6,7 +6,7 @@ import ResultDisplay from "@/components/ResultDisplay";
 import GenerateButton from "@/components/GenerateButton";
 import { generateImage } from "@/utils/imageGenerator";
 
-const GeneratePage = () => {
+const BasicPage = () => {
   const [poseImage, setPoseImage] = useState<File | null>(null);
   const [clothingImage, setClothingImage] = useState<File | null>(null);
   const [result, setResult] = useState<any>(null);
@@ -37,14 +37,14 @@ const GeneratePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="flex flex-col items-center space-y-4">
               <ImageUploadPanel
-                title="Upload Pose Photo"
+                title="Selecione sua foto"
                 onImageUpload={handlePoseUpload}
               />
             </div>
 
             <div className="flex flex-col items-center space-y-4">
               <ImageUploadPanel
-                title="Upload Clothing Item"
+                title="Selecione a roupa"
                 onImageUpload={handleClothingUpload}
               />
             </div>
@@ -58,7 +58,7 @@ const GeneratePage = () => {
             <GenerateButton
               onClick={handleGenerate}
               isLoading={isGenerating}
-              disabled={!poseImage || !clothingImage}
+              disabled={!poseImage || !clothingImage || result}
             />
           </div>
         </div>
@@ -68,4 +68,4 @@ const GeneratePage = () => {
   );
 };
 
-export default GeneratePage;
+export default BasicPage;

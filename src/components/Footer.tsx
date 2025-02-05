@@ -32,14 +32,7 @@ const Footer = () => {
                   Terms of Service
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-[#4A90E2] transition-colors"
-                >
-                  Contact Us
-                </a>
-              </li>
+
             </ul>
           </div>
           <div className="space-y-2">

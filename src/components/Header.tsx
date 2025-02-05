@@ -3,33 +3,24 @@ import { Shirt } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="w-full bg-[#2A2A2A] border-b border-[#4A90E2]/20">
+    <header className="w-full bg-[#1F1F1F] border-b border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <Shirt className="h-8 w-8 text-[#4A90E2]" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-[#8A2BE2] to-[#4A90E2] text-transparent bg-clip-text">
-              BotaCasaco
+            <Shirt className="h-10 w-10 text-[#FFD700]" />
+            <span className="text-3xl font-bold text-white">
+              <span className="bg-gradient-to-r from-[#FFD700] to-[#FF8C00] text-transparent bg-clip-text">
+                Bota
+              </span>
+              <span className="text-[#FFD700]">Casaco</span>
             </span>
           </div>
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="flex items-center space-x-8">
             <a
-              href="#"
-              className="text-gray-300 hover:text-[#4A90E2] transition-colors"
+              href="/"
+              className="text-lg font-medium text-gray-300 hover:text-[#FFD700] transition-colors"
             >
               Home
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-[#4A90E2] transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-[#4A90E2] transition-colors"
-            >
-              Contact
             </a>
           </nav>
         </div>
